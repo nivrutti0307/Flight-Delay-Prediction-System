@@ -1,8 +1,6 @@
 # app.py
-import streamlit as st
-import pandas as pd
-import plotly.express as px
-import plotly.graph_objects as go
+import streamlit as st  # type: ignore[import-not-found]
+import pandas as pd  # type: ignore[import-untyped]
 from flight_predictor import FlightDelayPredictor
 from datetime import datetime, timedelta
 from pathlib import Path
@@ -306,23 +304,14 @@ with col2:
             route_stats = create_features(route_stats)
             route_preds = model.predict(route_stats)
             
-            # Create histogram of delay probabilities
-            fig = px.histogram(
-                route_preds, 
-                x='DELAY_PROBABILITY',
-                nbins=20,
-                title=f"Delay Probability Distribution<br>{origin} → {destination}",
-                labels={'DELAY_PROBABILITY': 'Delay Probability', 'count': 'Number of Flights'},
-                color_discrete_sequence=['#1e3c72']
+            # Display the distribution without requiring the optional Plotly package.
+            histogram = (
+                route_preds['DELAY_PROBABILITY']
+                .value_counts(bins=20, sort=False)
+                .rename_axis('Delay Probability')
+                .to_frame('Number of Flights')
             )
-            
-            fig.update_layout(
-                xaxis_title="Delay Probability",
-                yaxis_title="Number of Flights",
-                showlegend=False
-            )
-            
-            st.plotly_chart(fig, use_container_width=True)
+            st.bar_chart(histogram, use_container_width=True)
             
             # Show average delay probability
             avg_delay_prob = route_preds['DELAY_PROBABILITY'].mean()
