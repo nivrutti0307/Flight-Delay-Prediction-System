@@ -1,6 +1,8 @@
 # ✈️ Flight Delay Prediction System
 ### Predicting weather-related flight-delay risk by combining historical flight data, weather events, feature engineering, XGBoost, and an interactive Streamlit application.
 
+![click here to go to dashboard](docs/Dashboard.png)
+
 # 1. 🎯 Objective
 
 ### Flight Delay Prediction System
@@ -566,7 +568,7 @@ The project report describes the application as a Streamlit web application with
 # 8. 🖥️ Application
 ## Flight Search Interface
 
-![click here to go to dashboard](docs/Dashboard.png)
+![click here to go to dashboard](docs/Route_Statistics.png)
 
 The Streamlit application allows users to select:
 
