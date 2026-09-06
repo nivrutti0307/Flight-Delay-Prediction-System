@@ -566,6 +566,8 @@ The project report describes the application as a Streamlit web application with
 # 8. 🖥️ Application
 ## Flight Search Interface
 
+![click here to go to dashboard](docs/Dashboard.png)
+
 The Streamlit application allows users to select:
 
 - Origin airport
@@ -573,9 +575,9 @@ The Streamlit application allows users to select:
 - Flight date
 - Optional time range
 
-![click here to go to dashboard](./Dashboard.pdf)
-
 ## Flight Search Results
+
+![click here to go to dashboard](docs/RouteStatistic.png)
 
 After selecting the route and date, the application displays flight information and delay statistics.
 
