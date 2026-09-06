@@ -573,7 +573,7 @@ The Streamlit application allows users to select:
 - Flight date
 - Optional time range
 
-[click here to go to dashboard](./Dashboard.pdf)
+![click here to go to dashboard](./Dashboard.pdf)
 
 ## Flight Search Results
 
