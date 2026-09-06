@@ -577,8 +577,6 @@ The Streamlit application allows users to select:
 
 ## Flight Search Results
 
-![click here to go to dashboard](docs/RouteStatistic.png)
-
 After selecting the route and date, the application displays flight information and delay statistics.
 
 The application also provides:
